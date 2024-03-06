@@ -40,6 +40,11 @@ int [][] arregloMochila;
 
                         int columnaPeso = i - objActual.peso;
                         arregloMochila[j][i] = arregloMochila[j-1][columnaPeso] + objActual.valor;
+                        
+                        if(arregloMochila[j][i] < arregloMochila[j-1][i]){
+                            arregloMochila[j][i] = arregloMochila[j-1][i];
+                        }
+                        
                     }
 
                 }
